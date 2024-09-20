@@ -21,10 +21,8 @@ public class fifth_exercise {
         persons[3] = p3;
         persons[4] = p4;
 
-
         for (Person person : persons) {
             System.out.println(person.name);
         }
-
     }
 }
