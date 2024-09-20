@@ -39,6 +39,6 @@ class Person_Modified {
 
     @Override
     public String toString() {
-        return "Person{ nemae = " + name + "}";
+        return "Person{name = " + name + "}";
     }
 }

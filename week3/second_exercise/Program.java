@@ -6,7 +6,7 @@ package second_exercise;
 //how can i make it work?
 import first_exercise.Person;
 
-public class Main {
+public class Program {
  public static void main(String[] args) {
     //creat an object form imported calss
     Person p1 = new Person("John", 29);
