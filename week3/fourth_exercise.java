@@ -7,6 +7,7 @@ class Car {
     static int numberOfWheels = 4;
 
     //your code here (define a static variable countCar)
+    static int countCar = 0;
 
     // Non-static variable: each Car object has its own color
     String color;
@@ -14,11 +15,13 @@ class Car {
 
     public Car() {
         //you code here
+        //countCar = countCar + 1;
+        countCar++;
     }
 
     // Static method: belongs to the class, not to objects
     static void displayWheels() {
-        System.out.println("All cars have " + numberOfWheels + " wheels.");
+        System.out.println("All cars of this tye have " + numberOfWheels + " wheels.");
     }
 
     // Non-static method: belongs to an object, can access both static and non-static members
@@ -33,8 +36,6 @@ class Car {
 
 public class fourth_exercise {
     public static void main(String[] args) {
-        // Access static method and variable without creating an object
-        Car.displayWheels();
 
         // Create objects to access non-static members
         Car car1 = new Car();
@@ -43,12 +44,28 @@ public class fourth_exercise {
         car1.model = "Ford";
         car1.displayModel();
 
+        System.out.println("After creation of first car: " + Car.countCar);
+
         Car car2 = new Car();
         car2.color = "Blue";
         car2.displayColor();
         car2.model = "Mazda";
         car2.displayModel();
 
+        System.out.println("After creation of second car: " + Car.countCar);
+
+        System.out.println("The number of wheels for all cars of this type" + Car.numberOfWheels); 
+
+        Car car3 = new Car();
+        car2.color = "Blue";
+        car2.displayColor();
+        car2.model = "Mazda";
+        car2.displayModel();
+
+        System.out.println("After creation of third car: " + Car.countCar);
         // your code here (for printng carCount)
+
+        System.out.println("===================");
+        Car.displayWheels();
     }
 }
