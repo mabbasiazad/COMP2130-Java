@@ -10,6 +10,13 @@ class Person {
     public String name;
     public int age;
 
-    //test change
+    //your code here- user defined constructor
+    Person(String specific_name, int specific_age){
+        this.name = specific_name;
+        this.age = specific_age;
+    }
+    public void display(){
+        System.out.println("name: " + name + " age: " + age);
+    }
 
 }
