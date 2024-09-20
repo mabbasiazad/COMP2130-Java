@@ -6,10 +6,17 @@
 //create a method named display() that prints the name and age of the person
 
 package first_exercise;
-class Person {
+public class Person {
     public String name;
     public int age;
 
-    //test
+    //user defined constructor
+    public Person(String specific_name, int specific_age){
+        this.name = specific_name;
+        this.age = specific_age;
+    }
+    public void display(){
+        System.out.println("name: " + name + " age: " + age );
+    }
 
 }
