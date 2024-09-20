@@ -7,6 +7,7 @@ class Car {
     static int numberOfWheels = 4;
 
     //your code here (define a static variable countCar)
+    static int countCar = 0;
 
     // Non-static variable: each Car object has its own color
     String color;
@@ -14,6 +15,7 @@ class Car {
 
     public Car() {
         //you code here
+        countCar++;
     }
 
     // Static method: belongs to the class, not to objects
@@ -43,11 +45,17 @@ public class fourth_exercise {
         car1.model = "Ford";
         car1.displayModel();
 
+        System.out.println("After creating the 1st car: " + Car.countCar);
+
         Car car2 = new Car();
         car2.color = "Blue";
         car2.displayColor();
         car2.model = "Mazda";
         car2.displayModel();
+
+        System.out.println("After creating the 2nd car: " + Car.countCar);
+
+        System.out.println(Car.numberOfWheels);
 
         // your code here (for printng carCount)
     }
