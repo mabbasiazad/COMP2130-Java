@@ -1,3 +1,4 @@
+package myCodes;
 
 class PrintInteger {
     public void print(int i) {

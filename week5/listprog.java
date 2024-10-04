@@ -1,46 +1,35 @@
-
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
+
 public class listprog {
+
     public static void main(String[] args) {
-        int[] nums = new int[5];
+        double[] nums = new double[3];
         nums[0] = 0;
         nums[1] = 10; 
-        nums[2] = 30; 
-        nums[3] = 40;
-        nums[4] = 100;
+        nums[2] = 20;
 
-        System.out.println(Arrays.toString(nums));
+        System.out.println(nums[1]);
 
-        ArrayList<Integer> list = new ArrayList<Integer>(); 
-        list.add(10);
+        System.out.println("Array: " + Arrays.toString(nums));
 
-        System.out.println(list);
+        // array  ==== arraylist
+        ArrayList<Double> list = new ArrayList<Double>();
+        list.add(34.7);
+        list.add(45.6);
+        list.add(98.0);
 
-        list.add(30);
-        list.add(50);
-        list.add(58);
 
-        System.out.println("The list before removing the 0th element");
-        System.out.println(list);
+        System.out.println("List: " + list);
+        list.remove(1);
+        System.out.println("List: " + list);
 
-        System.out.println("The list after removing the 0th element");
-        list.remove(0);
-        System.out.println(list);
-
-        ArrayList<String> list_string = new  ArrayList<String>();
-        list_string.add("Hi");
-        list_string.add("Java");
-        list_string.add("Programming");
-
-        System.out.println(list_string);
-
-        //pass both index or the name of string
-        list_string.remove("Java");
-        System.out.println(list_string);
+        System.out.println(list.get(1));
 
 
 
 
+
+  
     }
 }
