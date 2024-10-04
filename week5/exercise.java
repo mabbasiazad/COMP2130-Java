@@ -9,9 +9,10 @@ public class exercise {
         double BMI;
         for (double[] person: info) {
             BMI = person[0] / (person[1] * person[1]);
-            //add this BMI to your BMIs list 
+            BMIs.add(BMI);
         }
 
+        System.out.println(BMIs);
         //print BMIs list
     }
 }
