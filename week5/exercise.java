@@ -5,5 +5,13 @@ public class exercise {
         double[][] info = {{80, 1.6}, {92, 1.7}, {88, 1.75}, {50, 1.6}};
 
         ArrayList<Double> BMIs = new ArrayList<Double>();
+
+        double BMI;
+        for (double[] person: info) {
+            BMI = person[0] / (person[1] * person[1]);
+            //add this BMI to your BMIs list 
+        }
+
+        //print BMIs list
     }
 }
