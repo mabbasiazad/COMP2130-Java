@@ -2,6 +2,16 @@
 
 // I defined the super class Animal and supclass Dog in Step_1
 class Cat extends Animal {
+    
+    String foodPreference; 
+    Cat() {}
+
+    //exercise you can use super here show how? remove duplication 
+    Cat(int age, String name, String foodPreference) {
+        this.age = age;
+        this.name = name;
+        this.foodPreference = foodPreference;
+    }
     @Override
     public void eat() {
         super.eat();
