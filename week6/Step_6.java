@@ -24,20 +24,40 @@ class Student extends Person {
         System.out.println("Student constructor called: " + name + ", Major: " + major);
     }
 
-    // Add this part to the introduction of a person who is a student
-    // I am studying <major> 
-    
-    //your code here
-    
+    @Override 
+    public void introduce() {
+        super.introduce();
+        System.out.println("I'm studying " + major);
+    }
 
 }
 
+class Teacher extends Person {
+    
+    String subject;
+    public Teacher(String name, int age, String subject){
+        super(name, age);
+        this.subject = subject;
+    }
+
+    @Override
+    public void introduce(){
+        super.introduce();
+        System.out.println("I'm teaching " + subject);
+    }
+}
+
 //creat a subclass for Teacher with `String subject` attribute
+//teacher has a subject to teach
 //your code here
 
 public class Step_6 {
     public static void main(String[] args) {
         //create student name: "Alice", age: 20, major: "Computer Science" and call introduce;
-        
+        Student student =  new Student("Ali", 20, "Computer Science");
+        student.introduce();
+
+        Teacher teacher = new Teacher("Alex", 30, "Java");
+        teacher.introduce();
     }
 }

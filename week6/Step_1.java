@@ -1,5 +1,5 @@
 //Inheritance
-//Inheritance supports (1) code reuse and (2) polymorphism.
+//Inheritance supports (1) code reuse and (2) polymorphism (optional).
 
 // Superclass and subclass 
 //1. A subclass inherits all the non-private members (methods and fields) of the superclass.
@@ -34,5 +34,7 @@ public class Step_1 {
         Dog myDog = new Dog();
         myDog.eat();  // Inherited method
         myDog.bark(); // Method from Dog class
+        myDog.name = "Spot";
+        myDog.age = 5;
     }
 }

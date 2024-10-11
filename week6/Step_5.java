@@ -1,19 +1,23 @@
 // Interface 
-// you must implement all the methods in the interface
+// you "must" implement all the methods in the interface
 // you can use public, static, final attributes
 
 // exercise: change the Vehicle form interface to Class and use extend it by Tesla
 
-interface Vehicle {
-    void start();
+class Vehicle {
+    void start() {
+        System.out.println("the vehicle starts scilently");
+    };  //method without implementation
 }
 
+// the class with unimplemented methods = interface
 interface Electric {
     String VEHICLE_TYPE = "Electric Vehicle"; // This is a public static final attribute
     void charge();
+    void discharge();
 }
 
-class Tesla implements Vehicle, Electric {
+class Tesla extends Vehicle implements Electric {
     @Override
     public void start() {
         System.out.println("Tesla starts silently.");
@@ -22,6 +26,11 @@ class Tesla implements Vehicle, Electric {
     @Override
     public void charge() {
         System.out.println("Tesla is charging.");
+    }
+
+    @Override
+    public void discharge() {
+        System.out.println("Tesla is discharging.");
     }
 }
 

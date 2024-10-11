@@ -8,14 +8,13 @@ class Cat extends Animal {
 
     //exercise you can use super here show how? remove duplication 
     Cat(int age, String name, String foodPreference) {
-        this.age = age;
-        this.name = name;
+        super(age, name);
         this.foodPreference = foodPreference;
     }
     @Override
     public void eat() {
         super.eat();
-        System.out.println("The cat eats cat food.");
+        System.out.println("The cat " + name +  " eats cat food.");
     }
 
     public void sound(){
@@ -26,23 +25,12 @@ class Cat extends Animal {
 
 public class Step_3 {
     public static void main(String[] args) {
-        // Showing the polymorphism
-        Animal myAnimal = new Animal();
-        Animal myCat = new Cat();
-        Animal myDog = new Dog();
+        Cat cat = new Cat();
+        cat.eat();
         
-        System.out.println("===========================");
-        myAnimal.eat(); // Output: The animal eats food.
-        
-        System.out.println("===========================");
-        myCat.eat();    // Output: The cat eats cat food (overridden).
-        
-        System.out.println("============================");
-        myDog.eat();
+        Cat cat_2 = new Cat(4, "Tommy", "brandA");
+        cat_2.eat();
 
-        // To call the additional methods, we need to cast the object back to its original type
-        System.out.println("===============================");
-        ((Cat) myCat).sound();
     }
 }
 
