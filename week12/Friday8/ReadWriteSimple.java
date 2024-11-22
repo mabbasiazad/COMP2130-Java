@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 
 public class ReadWriteSimple {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
+        
         Student s1 = new Student("John", 3.5);
         Student s2 = new Student("Jane", 3.7);
         Student s3 = new Student("Bob", 3.9);
